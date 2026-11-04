@@ -1,135 +1,66 @@
 export const metadata = {
-  title: '6 Sneaky JavaScript Patterns to Cut Boilerplate',
+  title: '5 Tiny CLI Tricks You (Probably) Didn’t Know',
   alternates: {
-    canonical: '/n/2',
+    canonical: '/n/1',
   },
 };
 
-# 6 Sneaky JavaScript Patterns to Cut Boilerplate
+# 5 Tiny CLI Tricks You (Probably) Didn’t Know
 
 <br />
 
-Micro-optimizations and quality-of-life hacks to keep your scripts lean, readable, and bug-resistant.
+A lightning-round of command-line nuggets to level-up your dev workflow.
 
-## 1. **Optional Chaining `?.` + Nullish Coalescing `??`**
+## 1. **`history | grep` + `fzf` = instant recall**
 
-Stop writing five nested guards:
+Fish out that elusive command you ran last Tuesday:
 
-```js
-// Old
-const theme = user && user.settings && user.settings.theme
-  ? user.settings.theme
-  : 'light';
-
-// New
-const theme = user?.settings?.theme ?? 'light';
+```bash
+history | grep docker | fzf
 ````
 
-Fewer lines, same safety.
+Hit **Enter** and it pastes right back to your prompt like magic.
 
 ---
 
-## 2. **Barrel Files for One-Line Imports**
+## 2. **Reverse-search a Git log by file *content***
 
-Aggregate related exports into a single “barrel” file:
+Combine `git log` with `-S` (search diff) to find when a string first appeared:
 
-```js
-// utils/index.js
-export * from './format';
-export * from './validate';
-export * from './fetch';
-
-// SomeComponent.js
-import { formatDate, validateEmail, getJSON } from '@/utils';
+```bash
+git log -S"resizeObserver" --oneline -- src/components/Layout.tsx
 ```
-
-Kill import clutter without sacrificing tree-shaking.
 
 ---
 
-## 3. **Memoize Pure Functions with a `WeakMap`**
+## 3. **JSON-pretty print … with zero dependencies**
 
-Cache heavy computations tied to objects—no leaks:
+Mac & Linux already ship with `python3`:
 
-```js
-const cache = new WeakMap();
-
-export function expensive(obj) {
-  if (cache.has(obj)) return cache.get(obj);
-  const result = crunchNumbers(obj); // 🚀 costly
-  cache.set(obj, result);
-  return result;
-}
+```bash
+cat response.json | python3 -m json.tool | less
 ```
-
-Results follow the object’s lifetime—GC does the cleanup.
 
 ---
 
-## 4. **Tagged Template Literals for Safe HTML**
+## 4. **One-liner port-forwarding for quick demos**
 
-Prevent XSS without a third-party lib:
+Need to expose `localhost:3000`? Use SSH—no ngrok token needed.
 
-```js
-const escape = (strings, ...values) =>
-  strings.reduce(
-    (acc, str, i) =>
-      acc +
-      str +
-      (values[i]
-        ? String(values[i]).replace(/[&<>"']/g, (s) => ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;',
-          })[s])
-        : ''),
-    '',
-  );
-
-const name = '<script>alert(1)</script>';
-document.body.innerHTML = escape`<p>Hello, ${name}!</p>`;
+```bash
+ssh -R 80:localhost:3000 ssh.localhost.run
 ```
 
-Zero dependencies, maximum safety.
+Now share the generated URL on Slack and watch eyebrows rise.
 
 ---
 
-## 5. **`AbortController` for Cancellable `fetch`**
+## 5. **Measure *anything* with `time` + subshell**
 
-Stop orphaning network calls on route changes:
+How long does your linter actually take?
 
-```js
-const controller = new AbortController();
-const { signal } = controller;
-
-fetch('/api/data', { signal })
-  .then((r) => r.json())
-  .catch((e) => {
-    if (e.name !== 'AbortError') throw e;
-  });
-
-// later…
-controller.abort();
+```bash
+time (npm run lint > /dev/null)
 ```
 
-No more “state update on unmounted component” warnings.
-
----
-
-## 6. **Format Like a Native with `Intl`**
-
-Forget custom helpers—use the built-ins:
-
-```js
-const usd = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-}).format(1999.99); // "$1,999.99"
-
-const isoDate = new Intl.DateTimeFormat('sv-SE').format(new Date());
-// "2025-06-05"
-```
-
-Locale-aware, performant, and zero bloat.
+> 💡 *Pro-tip:* wrap this in a `pre-push` hook so slow commands get caught early.

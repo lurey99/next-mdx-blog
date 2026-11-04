@@ -1,26 +1,122 @@
-export const metadata = {
-  title: 'Ayush Malla Thakuri',
-  alternates: {
-    canonical: '/',
-  },
-};
+{/* Subtitle tag */}
+<div className="font-mono text-xs tracking-wider uppercase text-amber-500 mb-4">
+  Software Developer &bull; Computer Science
+</div>
 
-# Ayush Malla Thakuri
+{/* Main Title */}
+<h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
+  Ayush Malla Thakuri
+</h1>
 
-Hey, I'm Ayush. I'm a Computer Science student and software developer passionate about building web apps, distributed systems, and security tools.
+{/* Impact Hook */}
+<p className="text-xl sm:text-2xl text-zinc-300 font-medium mb-6 leading-snug">
+  I build modern web applications and resilient systems that scale.
+</p>
 
-## Projects
+{/* Summary */}
+<p className="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">
+  Undergraduate student studying Computer Science. Focused on full-stack development, cloud architecture, and secure software workflows.
+</p>
 
-- **[Project One](https://github.com/your-username/project1)**: A full-stack application built with React, Next.js, and Tailwind CSS.
-- **[Project Two](https://github.com/your-username/project2)**: A backend microservice built with Node / Python and cloud deployment.
+{/* Action Buttons */}
+<div className="flex flex-wrap gap-4 mb-20">
+  <a
+    href="#work"
+    className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded transition-colors duration-200"
+  >
+    View Work &rarr;
+  </a>
+  <a
+    href="#contact"
+    className="px-6 py-3 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 font-medium text-sm rounded transition-colors duration-200"
+  >
+    Get in Touch
+  </a>
+</div>
 
-## Notes & Articles
+---
 
-- [5 Tiny CLI Tricks You (Probably) Didn’t Know](/n/1)
-- [Building My Developer Portfolio](/n/2)
-- [6 CSS Patterns to Cut Boilerplate](/n/3)
+{/* Skills Section */}
+<section id="skills" className="pt-16 pb-12">
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Capabilities</div>
+  <h2 className="text-2xl font-bold text-white mb-8">Technical Skills</h2>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
+      <h3 className="text-white font-semibold mb-2">Languages</h3>
+      <p className="text-sm text-zinc-400">TypeScript, JavaScript, Python, C++, SQL, HTML/CSS</p>
+    </div>
+    <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
+      <h3 className="text-white font-semibold mb-2">Frameworks & Tools</h3>
+      <p className="text-sm text-zinc-400">React, Next.js, Tailwind CSS, Node.js, Git, Linux, Docker</p>
+    </div>
+  </div>
+</section>
 
-## Stack
+---
 
-- **Languages:** TypeScript, JavaScript, Python, C++
-- **Frameworks & Tools:** Next.js, React, Tailwind CSS, Git, Docker, Linux
+{/* Projects Section */}
+<section id="work" className="pt-16 pb-12">
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Portfolio</div>
+  <h2 className="text-2xl font-bold text-white mb-8">Featured Projects</h2>
+
+  <div className="space-y-6">
+    <div className="p-6 rounded-lg bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-colors">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-lg font-semibold text-white">Full-Stack Web Application</h3>
+        <span className="font-mono text-xs text-amber-500">React &bull; Next.js</span>
+      </div>
+      <p className="text-sm text-zinc-400 mb-4">
+        Interactive web application featuring state management, dynamic routing, and cloud deployment on Vercel.
+      </p>
+      <div className="flex space-x-4 text-xs font-mono text-zinc-400">
+        <a href="https://github.com" target="_blank" className="hover:text-amber-400">GitHub &rarr;</a>
+        <a href="#" className="hover:text-amber-400">Live Demo &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+{/* Contact Form Section */}
+<section id="contact" className="pt-16 pb-12">
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Get in touch</div>
+  <h2 className="text-2xl font-bold text-white mb-2">Let's talk</h2>
+  <p className="text-sm text-zinc-400 mb-8">
+    Send a message below or reach me directly at <a href="mailto:ayush@example.com" className="text-amber-500 hover:underline">your.email@example.com</a>.
+  </p>
+
+  <form className="space-y-4 max-w-xl">
+    <div>
+      <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Name</label>
+      <input
+        type="text"
+        placeholder="Your name"
+        className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
+      />
+    </div>
+    <div>
+      <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Email</label>
+      <input
+        type="email"
+        placeholder="you@example.com"
+        className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
+      />
+    </div>
+    <div>
+      <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Message</label>
+      <textarea
+        rows={4}
+        placeholder="What's on your mind?"
+        className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
+      />
+    </div>
+    <button
+      type="button"
+      className="w-full py-3 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded transition-colors"
+    >
+      Send message
+    </button>
+  </form>
+</section>
