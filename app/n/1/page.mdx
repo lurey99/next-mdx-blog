@@ -1,66 +1,26 @@
 export const metadata = {
-  title: '5 Tiny CLI Tricks You (Probably) Didn’t Know',
+  title: 'Ayush Malla Thakuri',
   alternates: {
-    canonical: '/n/1',
+    canonical: '/',
   },
 };
 
-# 5 Tiny CLI Tricks You (Probably) Didn’t Know
+# Ayush Malla Thakuri
 
-<br />
+Hey, I'm Ayush. I'm a Computer Science student and software developer passionate about building web apps, distributed systems, and security tools.
 
-A lightning-round of command-line nuggets to level-up your dev workflow.
+## Projects
 
-## 1. **`history | grep` + `fzf` = instant recall**
+- **[Project One](https://github.com/your-username/project1)**: A full-stack application built with React, Next.js, and Tailwind CSS.
+- **[Project Two](https://github.com/your-username/project2)**: A backend microservice built with Node / Python and cloud deployment.
 
-Fish out that elusive command you ran last Tuesday:
+## Notes & Articles
 
-```bash
-history | grep docker | fzf
-````
+- [5 Tiny CLI Tricks You (Probably) Didn’t Know](/n/1)
+- [Building My Developer Portfolio](/n/2)
+- [6 CSS Patterns to Cut Boilerplate](/n/3)
 
-Hit **Enter** and it pastes right back to your prompt like magic.
+## Stack
 
----
-
-## 2. **Reverse-search a Git log by file *content***
-
-Combine `git log` with `-S` (search diff) to find when a string first appeared:
-
-```bash
-git log -S"resizeObserver" --oneline -- src/components/Layout.tsx
-```
-
----
-
-## 3. **JSON-pretty print … with zero dependencies**
-
-Mac & Linux already ship with `python3`:
-
-```bash
-cat response.json | python3 -m json.tool | less
-```
-
----
-
-## 4. **One-liner port-forwarding for quick demos**
-
-Need to expose `localhost:3000`? Use SSH—no ngrok token needed.
-
-```bash
-ssh -R 80:localhost:3000 ssh.localhost.run
-```
-
-Now share the generated URL on Slack and watch eyebrows rise.
-
----
-
-## 5. **Measure *anything* with `time` + subshell**
-
-How long does your linter actually take?
-
-```bash
-time (npm run lint > /dev/null)
-```
-
-> 💡 *Pro-tip:* wrap this in a `pre-push` hook so slow commands get caught early.
+- **Languages:** TypeScript, JavaScript, Python, C++
+- **Frameworks & Tools:** Next.js, React, Tailwind CSS, Git, Docker, Linux
