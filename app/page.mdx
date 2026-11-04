@@ -1,30 +1,37 @@
-{/* Subtitle tag */}
-<div className="font-mono text-xs tracking-wider uppercase text-amber-500 mb-4">
-  Software Developer &bull; Computer Science
+export const metadata = {
+  title: 'Ayush Malla Thakuri | Software Developer',
+  alternates: {
+    canonical: '/',
+  },
+};
+
+{/* Hero Tag */}
+<div id="about" className="font-mono text-xs tracking-wider uppercase text-amber-500 mb-4">
+  COMPUTER SCIENCE &bull; UNIVERSITY OF NORTH TEXAS &bull; DALLAS-FORT WORTH, TX
 </div>
 
-{/* Main Title */}
+{/* Main Name */}
 <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
   Ayush Malla Thakuri
 </h1>
 
-{/* Impact Hook */}
+{/* Headline */}
 <p className="text-xl sm:text-2xl text-zinc-300 font-medium mb-6 leading-snug">
-  I build modern web applications and resilient systems that scale.
+  I build reliable full-stack applications, algorithms, and simulation software.
 </p>
 
-{/* Summary */}
+{/* Bio */}
 <p className="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">
-  Undergraduate student studying Computer Science. Focused on full-stack development, cloud architecture, and secure software workflows.
+  Computer Science undergraduate at the University of North Texas. Background in C++, Python, Java, SQL, and modern web application development, with experience across simulation logic and cloud systems.
 </p>
 
-{/* Action Buttons */}
+{/* Hero Buttons */}
 <div className="flex flex-wrap gap-4 mb-20">
   <a
     href="#work"
     className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded transition-colors duration-200"
   >
-    View Work &rarr;
+    View Projects &rarr;
   </a>
   <a
     href="#contact"
@@ -36,19 +43,63 @@
 
 ---
 
-{/* Skills Section */}
+{/* Technical Skills Section */}
 <section id="skills" className="pt-16 pb-12">
-  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Capabilities</div>
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Qualifications</div>
   <h2 className="text-2xl font-bold text-white mb-8">Technical Skills</h2>
-  
+
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
-      <h3 className="text-white font-semibold mb-2">Languages</h3>
-      <p className="text-sm text-zinc-400">TypeScript, JavaScript, Python, C++, SQL, HTML/CSS</p>
+      <h3 className="text-white font-semibold mb-2">Programming Languages</h3>
+      <p className="text-sm text-zinc-400">Python, Java, C, C++, .NET</p>
     </div>
     <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
-      <h3 className="text-white font-semibold mb-2">Frameworks & Tools</h3>
-      <p className="text-sm text-zinc-400">React, Next.js, Tailwind CSS, Node.js, Git, Linux, Docker</p>
+      <h3 className="text-white font-semibold mb-2">Databases & Querying</h3>
+      <p className="text-sm text-zinc-400">SQL, Relational Schema Design</p>
+    </div>
+    <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
+      <h3 className="text-white font-semibold mb-2">Tools, Platforms & OS</h3>
+      <p className="text-sm text-zinc-400">Git, Docker, Linux, Windows, VS Code</p>
+    </div>
+    <div className="p-5 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
+      <h3 className="text-white font-semibold mb-2">Concepts & Machine Learning</h3>
+      <p className="text-sm text-zinc-400">Data Preprocessing, Model Evaluation, Cloud & DevOps Foundations</p>
+    </div>
+  </div>
+</section>
+
+---
+
+{/* Education Section */}
+<section id="education" className="pt-16 pb-12">
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Academic Background</div>
+  <h2 className="text-2xl font-bold text-white mb-8">Education & Honors</h2>
+
+  <div className="space-y-6">
+    <div className="p-6 rounded-lg bg-zinc-900/40 border border-zinc-800">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+        <h3 className="text-lg font-semibold text-white">University of North Texas</h3>
+        <span className="font-mono text-xs text-amber-500">Expected Dec 2028</span>
+      </div>
+      <p className="text-sm text-zinc-300 font-medium mb-1">Bachelor of Science in Computer Science</p>
+      <p className="text-xs text-zinc-500">Denton, TX</p>
+    </div>
+
+    <div className="p-6 rounded-lg bg-zinc-900/40 border border-zinc-800">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+        <h3 className="text-lg font-semibold text-white">Dallas College</h3>
+        <span className="font-mono text-xs text-amber-500">Graduated Dec 2024</span>
+      </div>
+      <p className="text-sm text-zinc-300 font-medium mb-1">Associate of Science</p>
+      <p className="text-xs text-zinc-500 mb-3">Irving, TX</p>
+      <div className="flex flex-wrap gap-2">
+        <span className="text-xs font-mono px-2 py-1 bg-zinc-800/70 border border-zinc-700/60 rounded text-amber-400">
+          Provost's Honors Recognition
+        </span>
+        <span className="text-xs font-mono px-2 py-1 bg-zinc-800/70 border border-zinc-700/60 rounded text-zinc-300">
+          Dallas College Alumni Recognition Nominee
+        </span>
+      </div>
     </div>
   </div>
 </section>
@@ -57,21 +108,54 @@
 
 {/* Projects Section */}
 <section id="work" className="pt-16 pb-12">
-  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Portfolio</div>
-  <h2 className="text-2xl font-bold text-white mb-8">Featured Projects</h2>
+  <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Featured Work</div>
+  <h2 className="text-2xl font-bold text-white mb-8">Projects</h2>
 
   <div className="space-y-6">
+    {/* Assignment Reminder App */}
     <div className="p-6 rounded-lg bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-colors">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="text-lg font-semibold text-white">Full-Stack Web Application</h3>
-        <span className="font-mono text-xs text-amber-500">React &bull; Next.js</span>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+        <h3 className="text-lg font-semibold text-white">Assignment Reminder App</h3>
+        <span className="font-mono text-xs text-amber-500">Full-Stack Web App</span>
       </div>
       <p className="text-sm text-zinc-400 mb-4">
-        Interactive web application featuring state management, dynamic routing, and cloud deployment on Vercel.
+        Interactive productivity dashboard featuring smooth reactive components, task priority color-coding across calendar and home views, and cloud deployment.
       </p>
       <div className="flex space-x-4 text-xs font-mono text-zinc-400">
-        <a href="https://github.com" target="_blank" className="hover:text-amber-400">GitHub &rarr;</a>
-        <a href="#" className="hover:text-amber-400">Live Demo &rarr;</a>
+        <a
+          href="https://github.com/assignment-reminder-dev/assignment-reminder-app"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-amber-400"
+        >
+          GitHub &rarr;
+        </a>
+        <a
+          href="https://assignment-reminder-app.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-amber-400"
+        >
+          Live Demo &rarr;
+        </a>
+      </div>
+    </div>
+
+    {/* City Growth Simulation */}
+    <div className="p-6 rounded-lg bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+        <h3 className="text-lg font-semibold text-white">City Growth Simulation</h3>
+        <span className="font-mono text-xs text-amber-500">C++ &bull; 2D Data Structures</span>
+      </div>
+      <p className="text-sm text-zinc-400 mb-4">
+        Engineered a discrete 2D grid simulation implementing residential zone growth logic driven by adjacency and power distribution rules. Designed pollution propagation mechanics that decay with distance, and managed system documentation and version control with GitLab.
+      </p>
+      <div className="flex space-x-2 text-xs font-mono text-zinc-500">
+        <span>C++</span>
+        <span>&bull;</span>
+        <span>GitLab</span>
+        <span>&bull;</span>
+        <span>Simulation Logic</span>
       </div>
     </div>
   </div>
@@ -84,14 +168,28 @@
   <div className="font-mono text-xs uppercase tracking-wider text-amber-500 mb-2">Get in touch</div>
   <h2 className="text-2xl font-bold text-white mb-2">Let's talk</h2>
   <p className="text-sm text-zinc-400 mb-8">
-    Send a message below or reach me directly at <a href="mailto:ayush@example.com" className="text-amber-500 hover:underline">your.email@example.com</a>.
+    Send an email directly to{' '}
+    <a href="mailto:ayushmallathakuri@my.unt.edu" className="text-amber-500 hover:underline">
+      ayushmallathakuri@my.unt.edu
+    </a>{' '}
+    or connect via{' '}
+    <a href="https://app.joinhandshake.com/profiles/fx3t8f" target="_blank" rel="noreferrer" className="text-amber-500 hover:underline">
+      Handshake
+    </a>.
   </p>
 
-  <form className="space-y-4 max-w-xl">
+  <form
+    action="mailto:ayushmallathakuri@my.unt.edu"
+    method="POST"
+    encType="text/plain"
+    className="space-y-4 max-w-xl"
+  >
     <div>
       <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Name</label>
       <input
         type="text"
+        name="name"
+        required
         placeholder="Your name"
         className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
       />
@@ -100,6 +198,8 @@
       <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Email</label>
       <input
         type="email"
+        name="email"
+        required
         placeholder="you@example.com"
         className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
       />
@@ -107,13 +207,15 @@
     <div>
       <label className="block font-mono text-xs uppercase tracking-wider text-zinc-400 mb-2">Message</label>
       <textarea
+        name="message"
         rows={4}
+        required
         placeholder="What's on your mind?"
         className="w-full px-4 py-3 rounded bg-zinc-900/80 border border-zinc-800 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
       />
     </div>
     <button
-      type="button"
+      type="submit"
       className="w-full py-3 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded transition-colors"
     >
       Send message
