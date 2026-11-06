@@ -21,14 +21,14 @@ export function TVCard({ children, className = '' }: TVCardProps) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -7;
-    const rotateY = ((x - centerX) / centerX) * 7;
+    const rotateX = ((y - centerY) / centerY) * -5;
+    const rotateY = ((x - centerX) / centerX) * 5;
 
-    setTransform(`perspective(1000px) scale3d(1.015, 1.015, 1.015) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`);
+    setTransform(`perspective(1000px) scale3d(1.012, 1.012, 1.012) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`);
     setGlare({
       x: (x / rect.width) * 100,
       y: (y / rect.height) * 100,
-      opacity: 0.16,
+      opacity: 0.15,
     });
   };
 
@@ -46,12 +46,12 @@ export function TVCard({ children, className = '' }: TVCardProps) {
         transform: transform || 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)',
         transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease',
       }}
-      className={`group relative overflow-hidden rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-black/80 will-change-transform ${className}`}
+      className={`group relative overflow-hidden rounded-2xl bg-zinc-50/70 border border-black/[0.08] hover:border-black/20 hover:shadow-xl hover:shadow-black/5 will-change-transform backdrop-blur-md ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.22), transparent 70%)`,
+          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.9), transparent 70%)`,
           opacity: glare.opacity,
         }}
       />

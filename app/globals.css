@@ -7,6 +7,8 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 a,
@@ -14,20 +16,20 @@ button {
   transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Subtle scrollbar */
+/* Apple light scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0d;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 4px;
+  background: #e4e4e7;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #d4d4d8;
 }

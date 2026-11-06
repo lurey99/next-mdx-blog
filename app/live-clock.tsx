@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 
 export function LiveClock() {
@@ -11,7 +12,6 @@ export function LiveClock() {
         timeZone: 'America/Chicago',
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit',
         hour12: true,
       }).format(now);
       setTimeStr(formatted);
@@ -23,7 +23,7 @@ export function LiveClock() {
   }, []);
 
   return (
-    <span className="font-mono text-xs text-zinc-300 tracking-wider">
+    <span className="font-mono text-xs text-zinc-800 tracking-wider font-semibold">
       {timeStr || 'Loading...'} CT
     </span>
   );
