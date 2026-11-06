@@ -6,8 +6,14 @@ export const metadata = {
 };
 
 {/* Hero Subtitle */}
-<div id="about" className="font-mono text-xs tracking-wider uppercase text-zinc-500 mb-6 font-semibold">
+<div id="about" className="font-mono text-xs tracking-wider uppercase text-zinc-500 mb-4 font-semibold">
   COMPUTER SCIENCE &bull; UNIVERSITY OF NORTH TEXAS
+</div>
+
+{/* Active Work Status Pill */}
+<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 text-xs font-medium mb-6">
+  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+  <span>Available for Summer 2027 SWE Internships</span>
 </div>
 
 {/* Header */}
@@ -151,7 +157,7 @@ export const metadata = {
 
     {/* Project 1: Chocolaty Brown with Screenshot */}
     <TVCard>
-      <div className="relative h-48 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
+      <div className="relative h-48 sm:h-52 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
         <img
           src="/assignment-app.png"
           alt="Assignment Reminder App Preview"
@@ -207,7 +213,7 @@ export const metadata = {
 
     {/* Project 2: Sky Blue Simulation */}
     <TVCard>
-      <div className="h-48 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
+      <div className="h-48 sm:h-52 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
         <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-sky-100 font-semibold">
           simulation.grid.automata
         </div>
