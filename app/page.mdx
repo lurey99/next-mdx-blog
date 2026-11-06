@@ -72,13 +72,13 @@ export const metadata = {
   </TVCard>
 </section>
 
-{/* Education Section */}
+{/* Education & Core Coursework Section */}
 <section id="education" className="pt-8 pb-16">
   <div className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-3 font-semibold">Academic Journey</div>
   <h2 className="text-3xl font-bold text-black mb-8">Education & Honors</h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {/* University of North Texas - UNT Green */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    {/* University of North Texas */}
     <TVCard className="p-7 border-l-4 border-l-[#00853E]">
       <div className="flex justify-between items-start mb-2">
         <h3 className="text-lg font-bold text-[#00853E]">University of North Texas</h3>
@@ -90,7 +90,7 @@ export const metadata = {
       <p className="text-xs text-zinc-500 mt-1">Denton, TX</p>
     </TVCard>
 
-    {/* Dallas College - Dallas Blue */}
+    {/* Dallas College */}
     <TVCard className="p-7 border-l-4 border-l-[#004B87]">
       <div className="flex justify-between items-start mb-2">
         <h3 className="text-lg font-bold text-[#004B87]">Dallas College</h3>
@@ -110,32 +110,75 @@ export const metadata = {
       </div>
     </TVCard>
   </div>
+
+  {/* Curated Core Coursework Chips */}
+  <TVCard className="p-6">
+    <div className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-3 font-semibold">
+      Relevant Computer Science Coursework
+    </div>
+    <div className="flex flex-wrap gap-2">
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Software Engineering (CSCE 3444)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Principles of Systems Programming (CSCE 3600)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Analysis of Computer Algorithms (CSCE 4110)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Introduction to Computer Networks (CSCE 3530)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Fundamentals of Database Systems (CSCE 4350)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Assembly Language & Computer Organization (CSCE 2610)
+      </span>
+      <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/[0.04] border border-black/[0.08] text-zinc-800">
+        Digital Logic Design (EENG 2710)
+      </span>
+    </div>
+  </TVCard>
 </section>
 
-{/* Projects Section - Changed to My Projects */}
+{/* Projects Section */}
 <section id="work" className="pt-8 pb-16">
   <div className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-3 font-semibold">Portfolio</div>
   <h2 className="text-3xl sm:text-4xl font-bold text-black mb-10">My Projects</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    {/* Project 1: Chocolaty Brown */}
+    {/* Project 1: Chocolaty Brown with Screenshot */}
     <TVCard>
-      <div className="h-40 bg-gradient-to-br from-[#3b2316] to-[#5a3622] p-5 border-b border-black/[0.06] flex items-center justify-center">
-        <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-amber-100 font-semibold">
-          app.assignment-reminder.dev
+      <div className="relative h-48 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
+        <img
+          src="/assignment-app.png"
+          alt="Assignment Reminder App Preview"
+          className="w-full h-full object-cover object-top opacity-90 transition-transform duration-500 group-hover/img:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute bottom-3 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-amber-100 font-mono text-[11px] font-semibold">
+          assignment-reminder-app.vercel.app
         </div>
       </div>
 
       <div className="p-7">
         <h3 className="text-xl font-bold text-black mb-2">Assignment Reminder App</h3>
-        <p className="text-xs sm:text-sm text-zinc-600 mb-5 leading-relaxed">
-          Interactive productivity dashboard featuring smooth reactive components, task priority color-coding across calendar and home views, and cloud deployment.
+        <p className="text-xs sm:text-sm text-zinc-600 mb-4 leading-relaxed">
+          Productivity dashboard tracking active, overdue, and completed academic tasks with deadlines and reactive navigation.
         </p>
+
+        <ul className="text-xs text-zinc-600 space-y-1.5 mb-5 list-disc list-inside">
+          <li>Engineered priority categorization with status scheduling across upcoming coursework deadlines.</li>
+          <li>Designed Apple-inspired smooth responsive components and bottom tab navigation.</li>
+          <li>Integrated Vercel edge deployment with automated CI/CD builds on main branch commits.</li>
+        </ul>
 
         <div className="flex flex-wrap gap-2 mb-6">
           <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#4b2e1e]/10 border border-[#4b2e1e]/20 text-[#4b2e1e] font-semibold">Full-Stack</span>
           <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#4b2e1e]/10 border border-[#4b2e1e]/20 text-[#4b2e1e] font-semibold">React</span>
+          <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#4b2e1e]/10 border border-[#4b2e1e]/20 text-[#4b2e1e] font-semibold">Next.js</span>
           <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#4b2e1e]/10 border border-[#4b2e1e]/20 text-[#4b2e1e] font-semibold">Vercel</span>
         </div>
 
@@ -162,9 +205,9 @@ export const metadata = {
       </div>
     </TVCard>
 
-    {/* Project 2: Sky Blue */}
+    {/* Project 2: Sky Blue Simulation */}
     <TVCard>
-      <div className="h-40 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
+      <div className="h-48 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
         <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-sky-100 font-semibold">
           simulation.grid.automata
         </div>
@@ -172,13 +215,19 @@ export const metadata = {
 
       <div className="p-7">
         <h3 className="text-xl font-bold text-black mb-2">City Growth Simulation</h3>
-        <p className="text-xs sm:text-sm text-zinc-600 mb-5 leading-relaxed">
-          Discrete 2D grid simulation implementing residential zone growth driven by adjacency and power rules, featuring pollution decay algorithms and GitLab version tracking.
+        <p className="text-xs sm:text-sm text-zinc-600 mb-4 leading-relaxed">
+          Discrete 2D grid cellular simulation modeling industrial expansion, energy grid distribution, and environmental decay.
         </p>
+
+        <ul className="text-xs text-zinc-600 space-y-1.5 mb-5 list-disc list-inside">
+          <li>Implemented residential growth rules driven by power accessibility and adjacent cell states.</li>
+          <li>Developed pollution propagation mechanics where industrial impact decays over Euclidean distance.</li>
+          <li>Coordinated agile workflows, branch control, and system documentation using academic GitLab.</li>
+        </ul>
 
         <div className="flex flex-wrap gap-2 mb-6">
           <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 border border-sky-500/20 text-sky-700 font-semibold">C++</span>
-          <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 border border-sky-500/20 text-sky-700 font-semibold">Simulation</span>
+          <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 border border-sky-500/20 text-sky-700 font-semibold">Data Structures</span>
           <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 border border-sky-500/20 text-sky-700 font-semibold">GitLab</span>
         </div>
 
@@ -207,15 +256,10 @@ export const metadata = {
 
     {/* Buttons with black backgrounds & Handshake in blue */}
     <div className="flex flex-wrap items-center gap-4">
-      {/* Email Button (Black background) */}
-      <a
-        href="mailto:ayushmallathakuri@my.unt.edu"
-        className="px-6 py-3.5 bg-black hover:bg-zinc-800 text-white font-semibold text-sm rounded-full transition-all duration-200 shadow-sm hover:scale-105"
-      >
-        Email Me &rarr;
-      </a>
+      {/* Interactive Copy Email button */}
+      <CopyEmail />
 
-      {/* GitHub Button (Black background) */}
+      {/* GitHub Button (Solid black) */}
       <a
         href="https://github.com/assignment-reminder-dev/assignment-reminder-app"
         target="_blank"
