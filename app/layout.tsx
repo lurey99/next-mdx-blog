@@ -23,26 +23,51 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-white text-black min-h-screen antialiased selection:bg-black selection:text-white`}>
-        {/* Subtle Apple light ambient radial glow */}
+        {/* Subtle ambient glow */}
         <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(0,0,0,0.03),transparent)]" />
 
-        {/* Minimal Navigation Bar */}
-        <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-black/[0.06] px-8 sm:px-16 py-4 flex items-center justify-end">
-          <nav className="flex space-x-8 text-xs sm:text-sm font-medium text-zinc-600">
-            <a href="#about" className="hover:text-black transition-colors duration-200">About</a>
-            <a href="#skills" className="hover:text-black transition-colors duration-200">Skills</a>
-            <a href="#education" className="hover:text-black transition-colors duration-200">Education</a>
-            <a href="#work" className="hover:text-black transition-colors duration-200">Projects</a>
-            <a href="#contact" className="hover:text-black transition-colors duration-200">Contact</a>
+        {/* Floating iOS Liquid Pill Navigation Bar */}
+        <header className="sticky top-4 z-50 flex justify-center px-4">
+          <nav className="flex items-center gap-1 sm:gap-2 px-3 py-1.5 rounded-full bg-white/70 backdrop-blur-2xl border border-black/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+            <a
+              href="#about"
+              className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-zinc-600 hover:text-black hover:bg-black/[0.06] transition-all duration-200 active:scale-95"
+            >
+              About
+            </a>
+            <a
+              href="#skills"
+              className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-zinc-600 hover:text-black hover:bg-black/[0.06] transition-all duration-200 active:scale-95"
+            >
+              Skills
+            </a>
+            <a
+              href="#education"
+              className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-zinc-600 hover:text-black hover:bg-black/[0.06] transition-all duration-200 active:scale-95"
+            >
+              Education
+            </a>
+            <a
+              href="#work"
+              className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-zinc-600 hover:text-black hover:bg-black/[0.06] transition-all duration-200 active:scale-95"
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-zinc-600 hover:text-black hover:bg-black/[0.06] transition-all duration-200 active:scale-95"
+            >
+              Contact
+            </a>
           </nav>
         </header>
 
         {/* Main Content */}
-        <main className="max-w-6xl mx-auto px-6 sm:px-12 lg:px-16 py-16 relative z-10">
+        <main className="max-w-6xl mx-auto px-6 sm:px-12 lg:px-16 py-12 relative z-10">
           {children}
         </main>
 
-        {/* Apple-style Footer */}
+        {/* Footer */}
         <footer className="border-t border-black/[0.08] px-6 sm:px-16 py-8 text-xs text-zinc-500 flex flex-col sm:flex-row justify-between items-center max-w-6xl mx-auto w-full gap-4">
           <div className="flex items-center space-x-3">
             <span className="font-semibold text-black">Ayush Malla Thakuri</span>
