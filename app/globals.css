@@ -1,13 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 10 10 13;
-    --foreground: 226 228 234;
-  }
-}
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -23,7 +14,7 @@ button {
   transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Custom subtle scrollbar */
+/* Subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
