@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased min-h-screen bg-white text-black font-sans relative">
-        {/* Navbar with absolute positioning so it scrolls out of view */}
+        {/* Navbar with absolute positioning so it scrolls away naturally */}
         <header className="absolute top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
           <nav className="pointer-events-auto flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/80 backdrop-blur-md border border-black/[0.08] shadow-sm">
             <a
@@ -67,13 +67,13 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Main Content */}
-        <main className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+        {/* Widescreen Landscape Container (max-w-6xl instead of max-w-4xl) */}
+        <main className="max-w-6xl mx-auto px-6 sm:px-10 pt-28 pb-20">
           {children}
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-black/[0.06] py-10 max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+        <footer className="border-t border-black/[0.06] py-10 max-w-6xl mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
           <div>&copy; {new Date().getFullYear()} Ayush Malla Thakuri</div>
           <div className="flex items-center gap-2">
             <span>Dallas–Fort Worth, TX</span>
