@@ -1,3 +1,4 @@
+import './globals.css';
 import type { Metadata } from 'next';
 import { LiveClock } from './live-clock';
 
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased min-h-screen bg-white text-black font-sans relative">
-        {/* Absolute positioning: navbar stays at top and scrolls away off-screen */}
+        {/* Navbar with absolute positioning so it scrolls out of view */}
         <header className="absolute top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
           <nav className="pointer-events-auto flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/80 backdrop-blur-md border border-black/[0.08] shadow-sm">
             <a
