@@ -5,9 +5,10 @@ import React, { useRef, useState } from 'react';
 interface TVCardProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function TVCard({ children, className = '' }: TVCardProps) {
+export function TVCard({ children, className = '', style = {} }: TVCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState('');
   const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
@@ -24,11 +25,13 @@ export function TVCard({ children, className = '' }: TVCardProps) {
     const rotateX = ((y - centerY) / centerY) * -5;
     const rotateY = ((x - centerX) / centerX) * 5;
 
-    setTransform(`perspective(1000px) scale3d(1.012, 1.012, 1.012) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`);
+    setTransform(
+      `perspective(1000px) scale3d(1.012, 1.012, 1.012) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`
+    );
     setGlare({
       x: (x / rect.width) * 100,
       y: (y / rect.height) * 100,
-      opacity: 0.15,
+      opacity: 0.2,
     });
   };
 
@@ -44,18 +47,22 @@ export function TVCard({ children, className = '' }: TVCardProps) {
       onMouseLeave={handleMouseLeave}
       style={{
         transform: transform || 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)',
-        transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease',
+        transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease',
+        ...style,
       }}
-      className={`group relative overflow-hidden rounded-2xl bg-zinc-50/70 border border-black/[0.08] hover:border-black/20 hover:shadow-xl hover:shadow-black/5 will-change-transform backdrop-blur-md ${className}`}
+      className={`group relative overflow-hidden rounded-2xl will-change-transform shadow-md ${className}`}
     >
+      {/* Specular glare sheen */}
       <div
         className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.9), transparent 70%)`,
+          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.35), transparent 70%)`,
           opacity: glare.opacity,
         }}
       />
-      {children}
+      <div className="relative z-10 w-full h-full">
+        {children}
+      </div>
     </div>
   );
 }

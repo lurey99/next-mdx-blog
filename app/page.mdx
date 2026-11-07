@@ -48,39 +48,36 @@ export const metadata = {
   </a>
 </div>
 
-{/* Minimalist Landscape Technical Skills Box */}
+{/* Minimalist Landscape Technical Skills Box (Solid Dark Slate) */}
 <section id="skills" className="pt-4 pb-16">
   <div className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-3 font-semibold">Capabilities</div>
   <h2 className="text-3xl font-bold text-black mb-6">Technical Skills</h2>
 
-  <TVCard
-    style={{ backgroundColor: '#0f172a' }}
-    className="p-8 sm:p-10 w-full text-white shadow-xl"
-  >
+  <TVCard className="p-8 sm:p-10 w-full bg-[#0f172a] text-white">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
-        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+        <div className="inline-block px-2.5 py-1 rounded-md bg-white/10 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
           Languages
         </div>
         <p className="text-base font-bold text-white">Python, Java, C, C++, .NET</p>
       </div>
 
       <div className="sm:border-l sm:border-white/15 sm:pl-8">
-        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+        <div className="inline-block px-2.5 py-1 rounded-md bg-white/10 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
           Databases
         </div>
         <p className="text-base font-bold text-white">SQL, Relational Schemas</p>
       </div>
 
       <div className="lg:border-l lg:border-white/15 lg:pl-8">
-        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+        <div className="inline-block px-2.5 py-1 rounded-md bg-white/10 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
           Platforms & Tools
         </div>
         <p className="text-base font-bold text-white">Git, Docker, Linux, Windows</p>
       </div>
 
       <div className="sm:border-l sm:border-white/15 sm:pl-8">
-        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+        <div className="inline-block px-2.5 py-1 rounded-md bg-white/10 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
           Systems & ML
         </div>
         <p className="text-base font-bold text-white">Data Pipeline, Cloud & DevOps</p>
@@ -97,10 +94,7 @@ export const metadata = {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
     {/* Solid UNT Green Card */}
-    <TVCard
-      style={{ backgroundColor: '#00853E' }}
-      className="p-7 text-white shadow-xl"
-    >
+    <TVCard className="p-7 bg-[#00853E] text-white">
       <div className="flex justify-between items-start mb-3">
         <h3 className="text-xl font-extrabold text-white">University of North Texas</h3>
         <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
@@ -112,10 +106,7 @@ export const metadata = {
     </TVCard>
 
     {/* Solid Dallas College Blue Card */}
-    <TVCard
-      style={{ backgroundColor: '#0284c7' }}
-      className="p-7 text-white shadow-xl"
-    >
+    <TVCard className="p-7 bg-[#0284c7] text-white">
       <div className="flex justify-between items-start mb-3">
         <h3 className="text-xl font-extrabold text-white">Dallas College</h3>
         <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
@@ -136,10 +127,7 @@ export const metadata = {
   </div>
 
   {/* Solid Chocolaty Brown Coursework Card */}
-  <TVCard
-    style={{ backgroundColor: '#432818' }}
-    className="p-7 text-white shadow-xl"
-  >
+  <TVCard className="p-7 bg-[#432818] text-white">
     <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-amber-200 mb-4 font-bold">
       Relevant Computer Science Coursework
     </div>
@@ -177,7 +165,7 @@ export const metadata = {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     {/* Project 1: Assignment Reminder App */}
-    <TVCard className="bg-white border border-black/[0.08] shadow-md">
+    <TVCard className="bg-white border border-black/[0.08]">
       <div className="relative h-48 sm:h-52 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
         <img
           src="/assignment-app.png"
@@ -233,7 +221,7 @@ export const metadata = {
     </TVCard>
 
     {/* Project 2: City Growth Simulation */}
-    <TVCard className="bg-white border border-black/[0.08] shadow-md">
+    <TVCard className="bg-white border border-black/[0.08]">
       <div className="h-48 sm:h-52 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
         <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-sky-100 font-semibold">
           simulation.grid.automata
