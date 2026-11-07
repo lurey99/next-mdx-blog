@@ -48,30 +48,41 @@ export const metadata = {
   </a>
 </div>
 
-{/* Minimalist Landscape Technical Skills Box (Solid Midnight / Slate with White Text) */}
+{/* Minimalist Landscape Technical Skills Box */}
 <section id="skills" className="pt-4 pb-16">
   <div className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-3 font-semibold">Capabilities</div>
   <h2 className="text-3xl font-bold text-black mb-6">Technical Skills</h2>
 
-  <TVCard className="p-8 sm:p-10 w-full bg-[#0f172a] text-white border-0 shadow-lg shadow-slate-900/10">
+  <TVCard
+    style={{ backgroundColor: '#0f172a' }}
+    className="p-8 sm:p-10 w-full text-white shadow-xl"
+  >
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
-        <div className="text-xs font-mono uppercase tracking-wider text-slate-300 mb-2 font-bold">Languages</div>
+        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+          Languages
+        </div>
         <p className="text-base font-bold text-white">Python, Java, C, C++, .NET</p>
       </div>
 
       <div className="sm:border-l sm:border-white/15 sm:pl-8">
-        <div className="text-xs font-mono uppercase tracking-wider text-slate-300 mb-2 font-bold">Databases</div>
+        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+          Databases
+        </div>
         <p className="text-base font-bold text-white">SQL, Relational Schemas</p>
       </div>
 
       <div className="lg:border-l lg:border-white/15 lg:pl-8">
-        <div className="text-xs font-mono uppercase tracking-wider text-slate-300 mb-2 font-bold">Platforms & Tools</div>
+        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+          Platforms & Tools
+        </div>
         <p className="text-base font-bold text-white">Git, Docker, Linux, Windows</p>
       </div>
 
       <div className="sm:border-l sm:border-white/15 sm:pl-8">
-        <div className="text-xs font-mono uppercase tracking-wider text-slate-300 mb-2 font-bold">Systems & ML</div>
+        <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
+          Systems & ML
+        </div>
         <p className="text-base font-bold text-white">Data Pipeline, Cloud & DevOps</p>
       </div>
     </div>
@@ -84,65 +95,74 @@ export const metadata = {
   <h2 className="text-3xl font-bold text-black mb-8">Education & Honors</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-    
-    {/* Solid UNT Green Card with White Text */}
-    <TVCard className="p-7 bg-[#00853E] text-white border-0 shadow-lg shadow-[#00853E]/20">
-      <div className="flex justify-between items-start mb-2">
+
+    {/* Solid UNT Green Card */}
+    <TVCard
+      style={{ backgroundColor: '#00853E' }}
+      className="p-7 text-white shadow-xl"
+    >
+      <div className="flex justify-between items-start mb-3">
         <h3 className="text-xl font-extrabold text-white">University of North Texas</h3>
-        <span className="font-mono text-xs font-bold px-3 py-1 bg-white/20 border border-white/30 text-white rounded-full backdrop-blur-sm">
+        <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
           Expected Dec 2027
         </span>
       </div>
-      <p className="text-sm text-emerald-100 font-semibold mt-1">Bachelor of Science in Computer Science</p>
-      <p className="text-xs text-emerald-200 mt-1 font-medium">Denton, TX</p>
+      <p className="text-sm text-emerald-50 font-semibold">Bachelor of Science in Computer Science</p>
+      <p className="text-xs text-emerald-100/90 mt-1 font-medium">Denton, TX</p>
     </TVCard>
 
-    {/* Solid Dallas College Blue Card with White Text */}
-    <TVCard className="p-7 bg-[#004B87] text-white border-0 shadow-lg shadow-[#004B87]/20">
-      <div className="flex justify-between items-start mb-2">
+    {/* Solid Dallas College Blue Card */}
+    <TVCard
+      style={{ backgroundColor: '#0284c7' }}
+      className="p-7 text-white shadow-xl"
+    >
+      <div className="flex justify-between items-start mb-3">
         <h3 className="text-xl font-extrabold text-white">Dallas College</h3>
-        <span className="font-mono text-xs font-bold px-3 py-1 bg-white/20 border border-white/30 text-white rounded-full backdrop-blur-sm">
+        <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
           Graduated Dec 2024
         </span>
       </div>
-      <p className="text-sm text-sky-100 font-semibold mt-1">Associate of Science</p>
-      <p className="text-xs text-sky-200 mt-1 mb-4 font-medium">Irving, TX</p>
+      <p className="text-sm text-sky-50 font-semibold">Associate of Science</p>
+      <p className="text-xs text-sky-100/90 mt-1 mb-4 font-medium">Irving, TX</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-[11px] font-mono px-3 py-1 bg-white/20 border border-white/30 rounded-full text-white font-bold backdrop-blur-sm">
+        <span className="text-[11px] font-mono px-3 py-1 bg-black/30 border border-white/20 rounded-full text-white font-medium">
           Provost&apos;s Honors Recognition
         </span>
-        <span className="text-[11px] font-mono px-3 py-1 bg-white/15 border border-white/25 rounded-full text-sky-100 font-medium backdrop-blur-sm">
+        <span className="text-[11px] font-mono px-3 py-1 bg-black/25 border border-white/15 rounded-full text-sky-100 font-medium">
           Alumni Recognition Nominee
         </span>
       </div>
     </TVCard>
   </div>
 
-  {/* Solid Chocolaty Brown Coursework Card with White Text */}
-  <TVCard className="p-7 bg-[#3e2415] text-white border-0 shadow-lg shadow-[#3e2415]/20">
-    <div className="text-xs font-mono uppercase tracking-wider text-amber-200 mb-4 font-bold">
+  {/* Solid Chocolaty Brown Coursework Card */}
+  <TVCard
+    style={{ backgroundColor: '#432818' }}
+    className="p-7 text-white shadow-xl"
+  >
+    <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-amber-200 mb-4 font-bold">
       Relevant Computer Science Coursework
     </div>
     <div className="flex flex-wrap gap-2.5">
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Software Engineering (CSCE 3444)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Principles of Systems Programming (CSCE 3600)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Analysis of Computer Algorithms (CSCE 4110)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Introduction to Computer Networks (CSCE 3530)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Fundamentals of Database Systems (CSCE 4350)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Assembly Language & Computer Organization (CSCE 2610)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-colors backdrop-blur-sm">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
         Digital Logic Design (EENG 2710)
       </span>
     </div>
@@ -156,8 +176,8 @@ export const metadata = {
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    {/* Project 1: Chocolaty Brown with Screenshot */}
-    <TVCard>
+    {/* Project 1: Assignment Reminder App */}
+    <TVCard className="bg-white border border-black/[0.08] shadow-md">
       <div className="relative h-48 sm:h-52 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
         <img
           src="/assignment-app.png"
@@ -212,8 +232,8 @@ export const metadata = {
       </div>
     </TVCard>
 
-    {/* Project 2: Sky Blue Simulation */}
-    <TVCard>
+    {/* Project 2: City Growth Simulation */}
+    <TVCard className="bg-white border border-black/[0.08] shadow-md">
       <div className="h-48 sm:h-52 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
         <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-sky-100 font-semibold">
           simulation.grid.automata
@@ -261,12 +281,10 @@ export const metadata = {
       </p>
     </div>
 
-    {/* Buttons with black backgrounds & Handshake in blue */}
+    {/* Action Buttons */}
     <div className="flex flex-wrap items-center gap-4">
-      {/* Interactive Copy Email button */}
       <CopyEmail />
 
-      {/* GitHub Button (Solid black) */}
       <a
         href="https://github.com/assignment-reminder-dev/assignment-reminder-app"
         target="_blank"
@@ -277,7 +295,6 @@ export const metadata = {
         <span>GitHub</span>
       </a>
 
-      {/* Handshake Button (Official Blue) */}
       <a
         href="https://app.joinhandshake.com/profiles/fx3t8f"
         target="_blank"
