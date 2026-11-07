@@ -28,7 +28,7 @@ export const metadata = {
 {/* About Me Translucent Box */}
 <div className="p-6 sm:p-8 rounded-2xl bg-black/[0.02] border border-black/[0.08] backdrop-blur-md max-w-3xl mb-10 shadow-sm">
   <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
-    Computer Science undergraduate at the University of North Texas. Focused on C++, Python, Java, SQL, and modern web application development, with experience designing discrete simulation engines and cloud architectures.
+    Computer Science undergraduate at the <strong className="text-[#00853E] font-semibold">University of North Texas</strong>. Focused on <strong className="text-black font-semibold">C++</strong>, <strong className="text-black font-semibold">Python</strong>, <strong className="text-black font-semibold">Java</strong>, <strong className="text-black font-semibold">SQL</strong>, and modern web application development, with experience designing discrete simulation engines and cloud architectures.
   </p>
 </div>
 
@@ -48,12 +48,12 @@ export const metadata = {
   </a>
 </div>
 
-{/* Minimalist Landscape Technical Skills Box (Solid Dark Slate) */}
+{/* Minimalist Landscape Technical Skills Box (Dark Anchor) */}
 <section id="skills" className="pt-4 pb-16">
   <div className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-3 font-semibold">Capabilities</div>
   <h2 className="text-3xl font-bold text-black mb-6">Technical Skills</h2>
 
-  <TVCard className="p-8 sm:p-10 w-full bg-[#0f172a] text-white">
+  <TVCard className="p-8 sm:p-10 w-full bg-[#0f172a] text-white border border-slate-800 shadow-xl">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
         <div className="inline-block px-2.5 py-1 rounded-md bg-white/10 border border-white/10 text-xs font-mono uppercase tracking-wider text-slate-300 mb-3 font-semibold">
@@ -93,64 +93,64 @@ export const metadata = {
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-    {/* Solid UNT Green Card */}
-    <TVCard className="p-7 bg-[#00853E] text-white">
-      <div className="flex justify-between items-start mb-3">
-        <h3 className="text-xl font-extrabold text-white">University of North Texas</h3>
-        <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
+    {/* Refined UNT Green Card */}
+    <TVCard className="p-7 bg-white border border-[#00853E]/30 border-l-4 border-l-[#00853E] shadow-sm hover:border-[#00853E]">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-xl font-extrabold text-[#00853E]">University of North Texas</h3>
+        <span className="font-mono text-xs font-bold px-3 py-1 bg-[#00853E]/10 border border-[#00853E]/20 text-[#00853E] rounded-full">
           Expected Dec 2027
         </span>
       </div>
-      <p className="text-sm text-emerald-50 font-semibold">Bachelor of Science in Computer Science</p>
-      <p className="text-xs text-emerald-100/90 mt-1 font-medium">Denton, TX</p>
+      <p className="text-sm text-zinc-800 font-semibold mt-1">Bachelor of Science in Computer Science</p>
+      <p className="text-xs text-zinc-500 mt-1 font-medium">Denton, TX</p>
     </TVCard>
 
-    {/* Solid Dallas College Blue Card */}
-    <TVCard className="p-7 bg-[#0284c7] text-white">
-      <div className="flex justify-between items-start mb-3">
-        <h3 className="text-xl font-extrabold text-white">Dallas College</h3>
-        <span className="font-mono text-xs font-bold px-3 py-1 bg-black/30 border border-white/20 text-white rounded-full">
+    {/* Refined Dallas College Blue Card */}
+    <TVCard className="p-7 bg-white border border-[#0284c7]/30 border-l-4 border-l-[#0284c7] shadow-sm hover:border-[#0284c7]">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-xl font-extrabold text-[#0284c7]">Dallas College</h3>
+        <span className="font-mono text-xs font-bold px-3 py-1 bg-[#0284c7]/10 border border-[#0284c7]/20 text-[#0284c7] rounded-full">
           Graduated Dec 2024
         </span>
       </div>
-      <p className="text-sm text-sky-50 font-semibold">Associate of Science</p>
-      <p className="text-xs text-sky-100/90 mt-1 mb-4 font-medium">Irving, TX</p>
+      <p className="text-sm text-zinc-800 font-semibold mt-1">Associate of Science</p>
+      <p className="text-xs text-zinc-500 mt-1 mb-4 font-medium">Irving, TX</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-[11px] font-mono px-3 py-1 bg-black/30 border border-white/20 rounded-full text-white font-medium">
+        <span className="text-[11px] font-mono px-3 py-1 bg-[#0284c7]/10 border border-[#0284c7]/20 rounded-full text-[#0284c7] font-semibold">
           Provost&apos;s Honors Recognition
         </span>
-        <span className="text-[11px] font-mono px-3 py-1 bg-black/25 border border-white/15 rounded-full text-sky-100 font-medium">
+        <span className="text-[11px] font-mono px-3 py-1 bg-black/[0.04] border border-black/[0.08] rounded-full text-zinc-600 font-medium">
           Alumni Recognition Nominee
         </span>
       </div>
     </TVCard>
   </div>
 
-  {/* Solid Chocolaty Brown Coursework Card */}
-  <TVCard className="p-7 bg-[#432818] text-white">
-    <div className="inline-block px-2.5 py-1 rounded-md bg-black/40 border border-white/10 text-xs font-mono uppercase tracking-wider text-amber-200 mb-4 font-bold">
+  {/* Refined Chocolaty Brown Coursework Card */}
+  <TVCard className="p-7 bg-white border border-[#4b2e1e]/25 shadow-sm hover:border-[#4b2e1e]/50">
+    <div className="inline-block px-2.5 py-1 rounded-md bg-[#4b2e1e]/10 border border-[#4b2e1e]/20 text-xs font-mono uppercase tracking-wider text-[#4b2e1e] mb-4 font-bold">
       Relevant Computer Science Coursework
     </div>
     <div className="flex flex-wrap gap-2.5">
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Software Engineering (CSCE 3444)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Principles of Systems Programming (CSCE 3600)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Analysis of Computer Algorithms (CSCE 4110)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Introduction to Computer Networks (CSCE 3530)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Fundamentals of Database Systems (CSCE 4350)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Assembly Language & Computer Organization (CSCE 2610)
       </span>
-      <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black/30 border border-white/15 text-white">
+      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#4b2e1e]/[0.08] border border-[#4b2e1e]/20 text-[#3b2316] hover:bg-[#4b2e1e]/15 transition-colors">
         Digital Logic Design (EENG 2710)
       </span>
     </div>
@@ -165,7 +165,7 @@ export const metadata = {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     {/* Project 1: Assignment Reminder App */}
-    <TVCard className="bg-white border border-black/[0.08]">
+    <TVCard className="bg-white border border-black/[0.08] shadow-sm">
       <div className="relative h-48 sm:h-52 bg-[#3b2316] border-b border-black/[0.06] overflow-hidden flex items-center justify-center group/img">
         <img
           src="/assignment-app.png"
@@ -221,7 +221,7 @@ export const metadata = {
     </TVCard>
 
     {/* Project 2: City Growth Simulation */}
-    <TVCard className="bg-white border border-black/[0.08]">
+    <TVCard className="bg-white border border-black/[0.08] shadow-sm">
       <div className="h-48 sm:h-52 bg-gradient-to-br from-[#0284c7] to-[#38bdf8] p-5 border-b border-black/[0.06] flex items-center justify-center">
         <div className="px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 shadow-md font-mono text-xs text-sky-100 font-semibold">
           simulation.grid.automata
